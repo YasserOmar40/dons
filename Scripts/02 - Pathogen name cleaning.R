@@ -5,9 +5,9 @@
 
 library(tidyverse)
 
-setwd("/Users/yasseromar/Desktop")
+setwd("/Users/yasseromar/Desktop/dons/Data")
 
-raw <- read_csv("/Users/yasseromar/Desktop/dons-master/Data/DON-1.1.0001.csv")
+raw <- read_csv("/Users/yasseromar/Desktop/dons/Data/DON-1.1.0001.csv")
 
 raw # Look at the data
 
