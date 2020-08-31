@@ -118,4 +118,8 @@ dictionary <-  c("Ebola" = "Ebola haemorrhagic fever",
 raw %>% mutate(`Disease/pathogen name` = recode(`Disease/pathogen name`, 
                                                 !!!dictionary)) -> raw
 raw %>% pull(`Disease/pathogen name`) %>% sort %>% unique # See the names
+raw <- data.frame(lapply(raw,function(x){gsub("Japanese Ecephalitis", "Japanese Encephalitis", x)}))
+raw <- data.frame(lapply(raw,function(x){gsub("Unknown", "Unknown Illness", x)}))
+raw <- data.frame(lapply(raw,function(x){gsub("Rift Valley", "Rift Valley Fever", x)}))
 
+write.csv(raw,'DON-1.2.0001.csv')
